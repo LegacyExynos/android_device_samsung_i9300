@@ -14,9 +14,6 @@
 # limitations under the License.
 #
 
-# Include common makefile
-$(call inherit-product, device/samsung/smdk4412-common/common.mk)
-
 LOCAL_PATH := device/samsung/i9300
 
 # Overlay
@@ -67,7 +64,20 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
-    wifi.supplicant_scan_interval=15
+    wifi.supplicant_scan_interval=15 \
+    dalvik.vm.dexopt-data-only=1 \
+    rild.libpath=/system/lib/libsec-ril.so \
+    rild.libargs=-d /dev/ttyS0 \
+    ro.sf.lcd_density=320 \
+    ro.lcd_min_brightness=20 \
+    ro.telephony.ril_class=SamsungExynos4RIL \
+    mobiledata.interfaces=pdp0,wlan0,gprs,ppp0 \
+    ro.telephony.call_ring.multiple=false \
+    ro.telephony.call_ring.delay=3000 \
+    debug.hwui.render_dirty_regions=false \
+    ro.bq.gpu_to_cpu_unsupported=1 \
+    ro.opengles.version=131072 \
+    ro.zygote.disable_gl_preload=1
 
 # Gps
 PRODUCT_COPY_FILES += \
@@ -81,7 +91,7 @@ PRODUCT_PACKAGES := \
     audio.usb.default \
     com.android.future.usb.accessory \
     gralloc.exynos4 \
-    hwcomposer.exynos4 \
+    hwccomposer.exynos4 \
     libfimg \
     libnetcmdiface \
     libsecion \
