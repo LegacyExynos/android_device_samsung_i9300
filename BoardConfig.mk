@@ -73,7 +73,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_HARDWARE_CLASS := hardware/samsung/cmhw
 
 # Graphics
-BOARD_EGL_CFG := device/samsung/smdk4412-common/configs/egl.cfg
+BOARD_EGL_CFG := device/samsung/i9300/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 BOARD_USES_SKIAHWJPEG := true
 COMMON_GLOBAL_CFLAGS += -DSEC_HWJPEG_G2D -DFORCE_SCREENSHOT_CPU_PATH -DWORKAROUND_BUG_10194508
@@ -137,14 +137,14 @@ BOARD_HAVE_SAMSUNG_WIFI          := true
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_HAVE_SAMSUNG_BLUETOOTH := true
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/smdk4412-common/bluetooth/vnd_smdk4x12.txt
+BOARD_BLUEDROID_VENDOR_CONF := device/samsung/i9300/bluetooth/vnd_smdk4x12.txt
 
 # Vold
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/s3c-usbgadget/gadget/lun%d/file"
 
 # Recovery
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/smdk4412-common/recovery/recovery_keys.c
-BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/smdk4412-common/recovery/graphics.c
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/i9300/recovery/recovery_keys.c
+BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/i9300/recovery/graphics.c
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun0/file"
 BOARD_USES_MMCUTILS := true
@@ -168,7 +168,7 @@ TARGET_SPECIFIC_HEADER_PATH := device/samsung/i9300/include
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/i9300/bluetooth
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/samsung/smdk4412
+TARGET_KERNEL_SOURCE := kernel/samsung/i9300
 TARGET_KERNEL_CONFIG := cyanogenmod_i9300_defconfig
 
 # Recovery
